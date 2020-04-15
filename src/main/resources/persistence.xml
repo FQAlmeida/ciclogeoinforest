@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.0" xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence          http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+  <persistence-unit name="PU" transaction-type="RESOURCE_LOCAL">
+    <provider>org.hibernate.ejb.HibernatePersistence</provider>
+    <class>com.udesc.dcc.bdes.ciclogeoinforest.persistencia.SpatialRefSys</class>
+    <class>com.udesc.dcc.bdes.ciclogeoinforest.persistencia.GeometryColumns</class>
+    <class>com.udesc.dcc.bdes.ciclogeoinforest.dados.TransferObjects.Estado</class>
+    <class>com.udesc.dcc.bdes.ciclogeoinforest.dados.TransferObjects.Imagem</class>
+    <class>com.udesc.dcc.bdes.ciclogeoinforest.dados.TransferObjects.Tipo</class>
+    <class>com.udesc.dcc.bdes.ciclogeoinforest.dados.TransferObjects.Regiao</class>
+    <class>com.udesc.dcc.bdes.ciclogeoinforest.dados.TransferObjects.Superficie</class>
+    <class>com.udesc.dcc.bdes.ciclogeoinforest.dados.TransferObjects.Cidade</class>
+    <class>com.udesc.dcc.bdes.ciclogeoinforest.dados.TransferObjects.Trilhadados</class>
+    <class>com.udesc.dcc.bdes.ciclogeoinforest.dados.TransferObjects.Waypoint</class>
+    <class>com.udesc.dcc.bdes.ciclogeoinforest.dados.TransferObjects.Trilha</class>
+    <class>com.udesc.dcc.bdes.ciclogeoinforest.dados.TransferObjects.Dificuldade</class>
+    <class>com.udesc.dcc.bdes.ciclogeoinforest.dados.TransferObjects.Bairro</class>
+    <class>com.udesc.dcc.bdes.ciclogeoinforest.dados.TransferObjects.Categoria</class>
+    <class>com.udesc.dcc.bdes.ciclogeoinforest.dados.TransferObjects.Usuario</class>
+    <exclude-unlisted-classes>false</exclude-unlisted-classes>
+    <non-jta-data-source/>
+    <properties>
+      <property name="hibernate.connection.username" value="postgres"/>
+      <property name="hibernate.connection.driver_class" value="org.postgresql.Driver"/>
+      <property name="hibernate.connection.password" value="postgres"/>
+      <property name="hibernate.connection.url" value="jdbc:postgresql://127.0.0.1:5432/bicicletarestv1"/>
+      <property name="hibernate.cache.provider_class" value="org.hibernate.cache.NoCacheProvider"/>
+    </properties>
+  </persistence-unit>
+</persistence>

@@ -4,9 +4,17 @@
 	 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	 xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
 	 version="3.1">
-    <session-config>
-        <session-timeout>
-            30
-        </session-timeout>
-    </session-config>
+    <servlet>
+        <servlet-name>ciclogeoinforest</servlet-name>
+        <servlet-class>org.glassfish.jersey.servlet.ServletContainer</servlet-class>     
+        <init-param>
+            <param-name>jersey.config.server.provider.packages</param-name>
+            <param-value>com.udesc.dcc.bdes.ciclogeoinforest.negocio</param-value>
+        </init-param>
+        <load-on-startup>1</load-on-startup>
+     </servlet>
+     <servlet-mapping>
+        <servlet-name>ciclogeoinforest</servlet-name>
+        <url-pattern>/ciclo/*</url-pattern>
+     </servlet-mapping>
 </web-app>
